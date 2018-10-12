@@ -13,6 +13,12 @@
 		0714D84E217169CE0076A87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0714D84D217169CE0076A87E /* Assets.xcassets */; };
 		0714D851217169CE0076A87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0714D84F217169CE0076A87E /* LaunchScreen.storyboard */; };
 		0714D85C217169CE0076A87E /* SortedToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D85B217169CE0076A87E /* SortedToDoListTests.swift */; };
+		0714D86921716A870076A87E /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D86821716A870076A87E /* EndpointType.swift */; };
+		0714D86B21716AB20076A87E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D86A21716AB20076A87E /* Errors.swift */; };
+		0714D86D21716B470076A87E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D86C21716B470076A87E /* HTTPMethod.swift */; };
+		0714D86F21716B680076A87E /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D86E21716B680076A87E /* HTTPTask.swift */; };
+		0714D87121716BAB0076A87E /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87021716BAB0076A87E /* NetworkRouter.swift */; };
+		0714D87321716BE00076A87E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87221716BE00076A87E /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		0714D857217169CE0076A87E /* SortedToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortedToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0714D85B217169CE0076A87E /* SortedToDoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedToDoListTests.swift; sourceTree = "<group>"; };
 		0714D85D217169CE0076A87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0714D86821716A870076A87E /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		0714D86A21716AB20076A87E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		0714D86C21716B470076A87E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0714D86E21716B680076A87E /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		0714D87021716BAB0076A87E /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		0714D87221716BE00076A87E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		0714D845217169CD0076A87E /* SortedToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				0714D86621716A610076A87E /* Networking */,
 				0714D846217169CD0076A87E /* AppDelegate.swift */,
 				0714D848217169CD0076A87E /* ViewController.swift */,
 				0714D84A217169CD0076A87E /* Main.storyboard */,
@@ -94,6 +107,27 @@
 				0714D85D217169CE0076A87E /* Info.plist */,
 			);
 			path = SortedToDoListTests;
+			sourceTree = "<group>";
+		};
+		0714D86621716A610076A87E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0714D86721716A700076A87E /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0714D86721716A700076A87E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0714D86821716A870076A87E /* EndpointType.swift */,
+				0714D86A21716AB20076A87E /* Errors.swift */,
+				0714D86C21716B470076A87E /* HTTPMethod.swift */,
+				0714D86E21716B680076A87E /* HTTPTask.swift */,
+				0714D87021716BAB0076A87E /* NetworkRouter.swift */,
+				0714D87221716BE00076A87E /* Router.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0714D87321716BE00076A87E /* Router.swift in Sources */,
+				0714D86F21716B680076A87E /* HTTPTask.swift in Sources */,
+				0714D86B21716AB20076A87E /* Errors.swift in Sources */,
 				0714D849217169CD0076A87E /* ViewController.swift in Sources */,
 				0714D847217169CD0076A87E /* AppDelegate.swift in Sources */,
+				0714D86D21716B470076A87E /* HTTPMethod.swift in Sources */,
+				0714D86921716A870076A87E /* EndpointType.swift in Sources */,
+				0714D87121716BAB0076A87E /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
