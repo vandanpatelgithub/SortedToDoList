@@ -20,6 +20,12 @@
 		0714D87321716BE00076A87E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87221716BE00076A87E /* Router.swift */; };
 		0714D87621716CCA0076A87E /* ToDoTaskEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87521716CCA0076A87E /* ToDoTaskEndpoint.swift */; };
 		0714D87821716ED10076A87E /* ToDoTaskEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87721716ED10076A87E /* ToDoTaskEndpointTests.swift */; };
+		0714D87B217170120076A87E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87A217170120076A87E /* NetworkManager.swift */; };
+		0714D87E217170910076A87E /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D87D217170910076A87E /* ToDoTask.swift */; };
+		0714D882217171500076A87E /* ToDoTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D881217171500076A87E /* ToDoTaskTests.swift */; };
+		0714D888217171A50076A87E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D887217171A50076A87E /* Functions.swift */; };
+		0714D8892171728C0076A87E /* StubbedToDoTasksResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0714D884217171720076A87E /* StubbedToDoTasksResponse.json */; };
+		0714D88B217190DA0076A87E /* StubbedEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0714D88A217190DA0076A87E /* StubbedEmptyResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		0714D87221716BE00076A87E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0714D87521716CCA0076A87E /* ToDoTaskEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskEndpoint.swift; sourceTree = "<group>"; };
 		0714D87721716ED10076A87E /* ToDoTaskEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskEndpointTests.swift; sourceTree = "<group>"; };
+		0714D87A217170120076A87E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0714D87D217170910076A87E /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
+		0714D881217171500076A87E /* ToDoTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskTests.swift; sourceTree = "<group>"; };
+		0714D884217171720076A87E /* StubbedToDoTasksResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubbedToDoTasksResponse.json; sourceTree = "<group>"; };
+		0714D887217171A50076A87E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		0714D88A217190DA0076A87E /* StubbedEmptyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubbedEmptyResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,8 @@
 		0714D845217169CD0076A87E /* SortedToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				0714D8862171718F0076A87E /* Helper Functions */,
+				0714D87C217170830076A87E /* Model */,
 				0714D86621716A610076A87E /* Networking */,
 				0714D846217169CD0076A87E /* AppDelegate.swift */,
 				0714D848217169CD0076A87E /* ViewController.swift */,
@@ -105,8 +119,10 @@
 		0714D85A217169CE0076A87E /* SortedToDoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				0714D883217171560076A87E /* Stubs */,
+				0714D880217171370076A87E /* Model */,
+				0714D87F2171712D0076A87E /* Endpoint */,
 				0714D85D217169CE0076A87E /* Info.plist */,
-				0714D87721716ED10076A87E /* ToDoTaskEndpointTests.swift */,
 			);
 			path = SortedToDoListTests;
 			sourceTree = "<group>";
@@ -114,6 +130,7 @@
 		0714D86621716A610076A87E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0714D87921716FF60076A87E /* Manager */,
 				0714D87421716C970076A87E /* Endpoint */,
 				0714D86721716A700076A87E /* Service */,
 			);
@@ -139,6 +156,55 @@
 				0714D87521716CCA0076A87E /* ToDoTaskEndpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		0714D87921716FF60076A87E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0714D87A217170120076A87E /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0714D87C217170830076A87E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0714D87D217170910076A87E /* ToDoTask.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0714D87F2171712D0076A87E /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				0714D87721716ED10076A87E /* ToDoTaskEndpointTests.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		0714D880217171370076A87E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0714D881217171500076A87E /* ToDoTaskTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0714D883217171560076A87E /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0714D884217171720076A87E /* StubbedToDoTasksResponse.json */,
+				0714D88A217190DA0076A87E /* StubbedEmptyResponse.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		0714D8862171718F0076A87E /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				0714D887217171A50076A87E /* Functions.swift */,
+			);
+			path = "Helper Functions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0714D88B217190DA0076A87E /* StubbedEmptyResponse.json in Resources */,
 				0714D851217169CE0076A87E /* LaunchScreen.storyboard in Resources */,
+				0714D8892171728C0076A87E /* StubbedToDoTasksResponse.json in Resources */,
 				0714D84E217169CE0076A87E /* Assets.xcassets in Resources */,
 				0714D84C217169CD0076A87E /* Main.storyboard in Resources */,
 			);
@@ -244,7 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0714D87321716BE00076A87E /* Router.swift in Sources */,
+				0714D87E217170910076A87E /* ToDoTask.swift in Sources */,
 				0714D86F21716B680076A87E /* HTTPTask.swift in Sources */,
+				0714D87B217170120076A87E /* NetworkManager.swift in Sources */,
 				0714D86B21716AB20076A87E /* Errors.swift in Sources */,
 				0714D849217169CD0076A87E /* ViewController.swift in Sources */,
 				0714D847217169CD0076A87E /* AppDelegate.swift in Sources */,
@@ -252,6 +322,7 @@
 				0714D86D21716B470076A87E /* HTTPMethod.swift in Sources */,
 				0714D86921716A870076A87E /* EndpointType.swift in Sources */,
 				0714D87121716BAB0076A87E /* NetworkRouter.swift in Sources */,
+				0714D888217171A50076A87E /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0714D882217171500076A87E /* ToDoTaskTests.swift in Sources */,
 				0714D87821716ED10076A87E /* ToDoTaskEndpointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
