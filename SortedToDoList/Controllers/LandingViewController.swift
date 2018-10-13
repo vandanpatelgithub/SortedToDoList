@@ -15,6 +15,7 @@ class LandingViewController: UITableViewController {
     var helperFunctions: HelperFunctions?
     let reuseIdentifier = "taskCell"
     var tasks = [ToDoTask]()
+    var userInfos = [UserInfo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class LandingViewController: UITableViewController {
 
             if error == nil {
                 strongSelf.tasks = toDoTasks ?? []
+                strongSelf.helperFunctions?.buildUserDictionary(for: strongSelf.tasks)
+                strongSelf.helperFunctions?.buildUserInfoArray(forTaskDict: strongSelf.helperFunctions?.taskDict ?? [:])
+                strongSelf.userInfos = strongSelf.helperFunctions?.userInfos ?? []
                 DispatchQueue.main.async { strongSelf.tableView.reloadData() }
             } else {
                 let alert = Alert(vc: strongSelf, title: "ERROR", message: error ?? "")
@@ -34,12 +38,14 @@ class LandingViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return userInfos.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = "\(tasks[indexPath.row].title)"
+        let userInfo = userInfos[indexPath.row]
+        cell.textLabel?.text = "User ID: \(userInfo.id)"
+        cell.detailTextLabel?.text = "Incompleted Tasks: \(userInfo.incompletedToDos)"
         return cell
     }
 }
