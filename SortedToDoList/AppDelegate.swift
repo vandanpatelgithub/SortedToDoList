@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let networkManager = NetworkManager()
+        if let navVC = window?.rootViewController as? UINavigationController {
+            if let landingVC = navVC.viewControllers.first as? LandingViewController {
+                landingVC.networkManager = networkManager
+            }
+        }
         return true
     }
 
