@@ -30,6 +30,8 @@
 		0714D8902171C4D40076A87E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D88F2171C4D40076A87E /* Alert.swift */; };
 		0714D893217262050076A87E /* FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D892217262050076A87E /* FunctionsTests.swift */; };
 		0714D89521727B960076A87E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D89421727B960076A87E /* UserInfo.swift */; };
+		0714D89721728DA50076A87E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D89621728DA50076A87E /* Constants.swift */; };
+		0714D89921728E1A0076A87E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D89821728E1A0076A87E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		0714D88F2171C4D40076A87E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0714D892217262050076A87E /* FunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTests.swift; sourceTree = "<group>"; };
 		0714D89421727B960076A87E /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		0714D89621728DA50076A87E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0714D89821728E1A0076A87E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 			children = (
 				0714D887217171A50076A87E /* Functions.swift */,
 				0714D88F2171C4D40076A87E /* Alert.swift */,
+				0714D89621728DA50076A87E /* Constants.swift */,
 			);
 			path = "Helper Functions";
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			children = (
 				0714D848217169CD0076A87E /* LandingViewController.swift */,
 				0714D88D2171C1F90076A87E /* LoadingViewController.swift */,
+				0714D89821728E1A0076A87E /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,12 +346,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0714D87321716BE00076A87E /* Router.swift in Sources */,
+				0714D89921728E1A0076A87E /* DetailViewController.swift in Sources */,
 				0714D87E217170910076A87E /* ToDoTask.swift in Sources */,
 				0714D86F21716B680076A87E /* HTTPTask.swift in Sources */,
 				0714D87B217170120076A87E /* NetworkManager.swift in Sources */,
 				0714D86B21716AB20076A87E /* Errors.swift in Sources */,
 				0714D849217169CD0076A87E /* LandingViewController.swift in Sources */,
 				0714D8902171C4D40076A87E /* Alert.swift in Sources */,
+				0714D89721728DA50076A87E /* Constants.swift in Sources */,
 				0714D847217169CD0076A87E /* AppDelegate.swift in Sources */,
 				0714D87621716CCA0076A87E /* ToDoTaskEndpoint.swift in Sources */,
 				0714D86D21716B470076A87E /* HTTPMethod.swift in Sources */,

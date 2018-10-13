@@ -19,6 +19,41 @@ class LandingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        getToDoTasks()
+    }
+
+    // MARK: - TableView DataSource
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userInfos.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let userInfo = userInfos[indexPath.row]
+        cell.textLabel?.text = "User ID: \(userInfo.id)"
+        cell.detailTextLabel?.text = "Incompleted Tasks: \(userInfo.incompletedToDos)"
+        return cell
+    }
+
+    // MARK: - TableView Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userID = userInfos[indexPath.row].id
+        performSegue(withIdentifier: SegueIDs.fromLandingToDetail, sender: userID)
+    }
+
+    // MARK: - Sending Data to Detail
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueIDs.fromLandingToDetail {
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.userID = sender as? Int
+            detailVC.helperFunctions = helperFunctions
+        }
+    }
+
+    // MARK: - fileprivate methods
+    fileprivate func getToDoTasks() {
         if let loadingVC = loadingVC { add(loadingVC) }
         networkManager?.getToDoTasks(completion: { [weak self] (toDoTasks, error) in
             guard let strongSelf = self else { return }
@@ -35,18 +70,6 @@ class LandingViewController: UITableViewController {
                 alert.showAlert()
             }
         })
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userInfos.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        let userInfo = userInfos[indexPath.row]
-        cell.textLabel?.text = "User ID: \(userInfo.id)"
-        cell.detailTextLabel?.text = "Incompleted Tasks: \(userInfo.incompletedToDos)"
-        return cell
     }
 }
 
