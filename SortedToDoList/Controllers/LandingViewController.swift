@@ -12,6 +12,7 @@ class LandingViewController: UITableViewController {
 
     var networkManager: NetworkManager?
     var loadingVC: LoadingViewController?
+    var helperFunctions: HelperFunctions?
     let reuseIdentifier = "taskCell"
     var tasks = [ToDoTask]()
 
@@ -38,7 +39,7 @@ class LandingViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row) : \(tasks[indexPath.row].title)"
+        cell.textLabel?.text = "\(tasks[indexPath.row].title)"
         return cell
     }
 }

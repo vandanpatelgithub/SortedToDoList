@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let landingVC = navVC.viewControllers.first as? LandingViewController {
                 landingVC.networkManager = networkManager
                 landingVC.loadingVC = LoadingViewController()
+                landingVC.helperFunctions = HelperFunctions()
             }
         }
         return true
