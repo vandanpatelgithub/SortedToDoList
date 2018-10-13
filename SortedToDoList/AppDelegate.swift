@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let networkManager = NetworkManager()
         if let navVC = window?.rootViewController as? UINavigationController {
             if let landingVC = navVC.viewControllers.first as? LandingViewController {
                 landingVC.networkManager = networkManager
+                landingVC.loadingVC = LoadingViewController()
             }
         }
         return true

@@ -11,18 +11,23 @@ import UIKit
 class LandingViewController: UITableViewController {
 
     var networkManager: NetworkManager?
+    var loadingVC: LoadingViewController?
     let reuseIdentifier = "taskCell"
     var tasks = [ToDoTask]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let loadingVC = loadingVC { add(loadingVC) }
         networkManager?.getToDoTasks(completion: { [weak self] (toDoTasks, error) in
-            guard
-                let strongSelf = self,
-                let tasks = toDoTasks else { return }
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async { strongSelf.loadingVC?.remove() }
+
             if error == nil {
-                strongSelf.tasks = tasks
+                strongSelf.tasks = toDoTasks ?? []
                 DispatchQueue.main.async { strongSelf.tableView.reloadData() }
+            } else {
+                let alert = Alert(vc: strongSelf, title: "ERROR", message: error ?? "")
+                alert.showAlert()
             }
         })
     }

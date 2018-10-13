@@ -26,6 +26,8 @@
 		0714D888217171A50076A87E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D887217171A50076A87E /* Functions.swift */; };
 		0714D8892171728C0076A87E /* StubbedToDoTasksResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0714D884217171720076A87E /* StubbedToDoTasksResponse.json */; };
 		0714D88B217190DA0076A87E /* StubbedEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0714D88A217190DA0076A87E /* StubbedEmptyResponse.json */; };
+		0714D88E2171C1F90076A87E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D88D2171C1F90076A87E /* LoadingViewController.swift */; };
+		0714D8902171C4D40076A87E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714D88F2171C4D40076A87E /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		0714D884217171720076A87E /* StubbedToDoTasksResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubbedToDoTasksResponse.json; sourceTree = "<group>"; };
 		0714D887217171A50076A87E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0714D88A217190DA0076A87E /* StubbedEmptyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubbedEmptyResponse.json; sourceTree = "<group>"; };
+		0714D88D2171C1F90076A87E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		0714D88F2171C4D40076A87E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				0714D887217171A50076A87E /* Functions.swift */,
+				0714D88F2171C4D40076A87E /* Alert.swift */,
 			);
 			path = "Helper Functions";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				0714D848217169CD0076A87E /* LandingViewController.swift */,
+				0714D88D2171C1F90076A87E /* LoadingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,11 +331,13 @@
 				0714D87B217170120076A87E /* NetworkManager.swift in Sources */,
 				0714D86B21716AB20076A87E /* Errors.swift in Sources */,
 				0714D849217169CD0076A87E /* LandingViewController.swift in Sources */,
+				0714D8902171C4D40076A87E /* Alert.swift in Sources */,
 				0714D847217169CD0076A87E /* AppDelegate.swift in Sources */,
 				0714D87621716CCA0076A87E /* ToDoTaskEndpoint.swift in Sources */,
 				0714D86D21716B470076A87E /* HTTPMethod.swift in Sources */,
 				0714D86921716A870076A87E /* EndpointType.swift in Sources */,
 				0714D87121716BAB0076A87E /* NetworkRouter.swift in Sources */,
+				0714D88E2171C1F90076A87E /* LoadingViewController.swift in Sources */,
 				0714D888217171A50076A87E /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
